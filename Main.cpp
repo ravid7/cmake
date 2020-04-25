@@ -1,10 +1,7 @@
 #include <iostream>
 
-using namespace std;
+int main(){
 
-int main(int argc, char const *argv[]){
-    if(argc > 1)
-        return 1;
-    cout<<"..."<<endl;
+    std::cout<<"..."<<std::endl;
     return 0;
 }
