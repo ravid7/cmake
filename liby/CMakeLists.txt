@@ -1,7 +1,8 @@
 add_library("tester" 
-    SHARED
-    "${CMAKE_CURRENT_SOURCE_DIR}/src/Hello.hpp"
-    "${CMAKE_CURRENT_SOURCE_DIR}/src/Hello.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/internal/Hello.hpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/internal/Hello.cpp"
     )
 
-target_include_directories("tester" PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src")
+target_include_directories("tester" PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src/internal")
+
+target_compile_definitions("tester" INTERFACE RAVI_RATHORE=42)
